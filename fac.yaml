@@ -1,6 +1,3 @@
-# variables that are used in dependencies but not in the target will trigger a build of the dependency
-# all of the files that match the target will be included in the dependencies
-
 "outline.json":
   cmd: cp basic.json outline.json
   dependencies:
@@ -24,13 +21,27 @@
   dependencies:
     - outline.json
     - resources/$RESOURCE/about.json
-    # NOTE:
-    # the above will expand to
-    # resources/a/about.json
-    # resources/b/about.json
   variables:
     LEVEL1:
       jq -r 'range(0; .sections | length)' outline.json
+
+# this target requires $LEVEL1, but does not directly define it
+# it should "inherit" the definition from the outline.json target above
+"sub$LEVEL1/wc":
+  cmd: |
+    cd sub$LEVEL1
+    wc -l outline.json > wc
+  dependencies:
+    - sub$LEVEL1/outline.json
+
+# this target will recursively inherrit the $LEVEL1 definition
+# from sub$LEVEL1/outline.json via sub$LEVEL1/wc
+"sub$LEVEL1/wc2":
+  cmd: |
+    cd sub$LEVEL1
+    wc -l wc > wc2
+  dependencies:
+    - sub$LEVEL1/wc
 
 "sub$LEVEL1/sub$LEVEL2/outline.json":
   cmd: |
@@ -39,10 +50,25 @@
     - outline.json
     - sub$LEVEL1/outline.json
   variables:
-    LEVEL1: |
-      jq -r 'range(0; .sections | length)' outline.json
     LEVEL2: |
       jq -r "range(0; [.sections | length, $(($LEVEL1 + 1))] | min )" sub$LEVEL1/outline.json
+    # notice that LEVEL1 is not defined here and will be inherrited
+
+# this target inherits $LEVEL1 and $LEVEL2
+"sub$LEVEL1/sub$LEVEL2/wc":
+  cmd: |
+    cd sub$LEVEL1/sub$LEVEL2
+    wc -l outline.json > wc
+  dependencies:
+    - sub$LEVEL1/sub$LEVEL2/outline.json
+
+# this target inherits $LEVEL1 and $LEVEL2 recursively
+"sub$LEVEL1/sub$LEVEL2/wc2":
+  cmd: |
+    cd sub$LEVEL1/sub$LEVEL2
+    wc -l wc > wc2
+  dependencies:
+    - sub$LEVEL1/sub$LEVEL2/wc
 
 "final.txt":
   cmd: |
