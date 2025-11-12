@@ -13,6 +13,12 @@
 
 
 ---
+./final.txt
+---
+hello
+
+
+---
 ./outline.json
 ---
 { "sections":
@@ -529,6 +535,12 @@ test
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0003/dep
+---
+sub0003/outline.json
 
 
 ---

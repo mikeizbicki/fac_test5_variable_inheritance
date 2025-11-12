@@ -28,66 +28,6 @@
 
 
 ---
-./sub0001/outline.json
----
-{ "sections":
-    [ {"name": "a"}
-    , {"name": "b"}
-    , {"name": "c"}
-    , {"name": "d"}
-    , {"name": "e"}
-    , {"name": "f"}
-    , {"name": "g"}
-    ]
-}
-
-
----
-./sub0006/outline.json
----
-{ "sections":
-    [ {"name": "a"}
-    , {"name": "b"}
-    , {"name": "c"}
-    , {"name": "d"}
-    , {"name": "e"}
-    , {"name": "f"}
-    , {"name": "g"}
-    ]
-}
-
-
----
-./sub0002/outline.json
----
-{ "sections":
-    [ {"name": "a"}
-    , {"name": "b"}
-    , {"name": "c"}
-    , {"name": "d"}
-    , {"name": "e"}
-    , {"name": "f"}
-    , {"name": "g"}
-    ]
-}
-
-
----
-./sub0004/outline.json
----
-{ "sections":
-    [ {"name": "a"}
-    , {"name": "b"}
-    , {"name": "c"}
-    , {"name": "d"}
-    , {"name": "e"}
-    , {"name": "f"}
-    , {"name": "g"}
-    ]
-}
-
-
----
 ./deps/a
 ---
 test
@@ -142,37 +82,28 @@ test
 
 
 ---
-./sub0000/outline.json
----
-{ "sections":
-    [ {"name": "a"}
-    , {"name": "b"}
-    , {"name": "c"}
-    , {"name": "d"}
-    , {"name": "e"}
-    , {"name": "f"}
-    , {"name": "g"}
-    ]
-}
-
-
----
-./sub0005/outline.json
----
-{ "sections":
-    [ {"name": "a"}
-    , {"name": "b"}
-    , {"name": "c"}
-    , {"name": "d"}
-    , {"name": "e"}
-    , {"name": "f"}
-    , {"name": "g"}
-    ]
-}
-
-
----
 ./sub0003/outline.json
+---
+{ "sections":
+    [ {"name": "a"}
+    , {"name": "b"}
+    , {"name": "c"}
+    , {"name": "d"}
+    , {"name": "e"}
+    , {"name": "f"}
+    , {"name": "g"}
+    ]
+}
+
+
+---
+./sub0003/sub0003/dep
+---
+sub0003/sub0003/outline.json
+
+
+---
+./sub0003/sub0003/outline.json
 ---
 { "sections":
     [ {"name": "a"}

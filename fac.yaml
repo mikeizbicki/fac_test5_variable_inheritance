@@ -27,27 +27,28 @@
 
 # this target requires $LEVEL1, but does not directly define it
 # it should "inherit" the definition from the outline.json target above
-"sub$LEVEL1/wc":
+"sub$LEVEL1/dep":
   cmd: |
     cd sub$LEVEL1
-    wc -l outline.json > wc
+    echo "$FAC_DEPENDENCIES" > dep
   dependencies:
     - sub$LEVEL1/outline.json
 
 # this target will recursively inherrit the $LEVEL1 definition
-# from sub$LEVEL1/outline.json via sub$LEVEL1/wc
-"sub$LEVEL1/wc2":
+# from sub$LEVEL1/outline.json via sub$LEVEL1/dep
+"sub$LEVEL1/dep2":
   cmd: |
     cd sub$LEVEL1
-    wc -l wc > wc2
+    echo "$FAC_DEPENDENCIES" > dep2
   dependencies:
-    - sub$LEVEL1/wc
+    - outline.json
+    - resources/$RESOURCE/about.json
+    - sub$LEVEL1/dep
 
 "sub$LEVEL1/sub$LEVEL2/outline.json":
   cmd: |
-    cp basic.json sub$LEVEL1/sub$LEVEL2/outline.json
+    cp sub$LEVEL1/outline.json sub$LEVEL1/sub$LEVEL2/outline.json
   dependencies:
-    - outline.json
     - sub$LEVEL1/outline.json
   variables:
     LEVEL2: |
@@ -55,20 +56,22 @@
     # notice that LEVEL1 is not defined here and will be inherrited
 
 # this target inherits $LEVEL1 and $LEVEL2
-"sub$LEVEL1/sub$LEVEL2/wc":
+"sub$LEVEL1/sub$LEVEL2/dep":
   cmd: |
     cd sub$LEVEL1/sub$LEVEL2
-    wc -l outline.json > wc
+    echo "$FAC_DEPENDENCIES" > dep
   dependencies:
     - sub$LEVEL1/sub$LEVEL2/outline.json
 
 # this target inherits $LEVEL1 and $LEVEL2 recursively
-"sub$LEVEL1/sub$LEVEL2/wc2":
+"sub$LEVEL1/sub$LEVEL2/dep2":
   cmd: |
     cd sub$LEVEL1/sub$LEVEL2
-    wc -l wc > wc2
+    echo "$FAC_DEPENDENCIES" > dep2
   dependencies:
-    - sub$LEVEL1/sub$LEVEL2/wc
+    - outline.json
+    - resources/$RESOURCE/about.json
+    - sub$LEVEL1/sub$LEVEL2/dep
 
 "final.txt":
   cmd: |

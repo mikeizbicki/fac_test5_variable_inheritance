@@ -1,0 +1,105 @@
+./basic.json
+---
+{ "sections":
+    [ {"name": "a"}
+    , {"name": "b"}
+    , {"name": "c"}
+    , {"name": "d"}
+    , {"name": "e"}
+    , {"name": "f"}
+    , {"name": "g"}
+    ]
+}
+
+
+---
+./outline.json
+---
+{ "sections":
+    [ {"name": "a"}
+    , {"name": "b"}
+    , {"name": "c"}
+    , {"name": "d"}
+    , {"name": "e"}
+    , {"name": "f"}
+    , {"name": "g"}
+    ]
+}
+
+
+---
+./deps/a
+---
+test
+
+
+---
+./deps/b
+---
+test
+
+
+---
+./resources/a/about.json
+---
+{ "sections":
+    [ {"name": "a"}
+    , {"name": "b"}
+    , {"name": "c"}
+    , {"name": "d"}
+    , {"name": "e"}
+    , {"name": "f"}
+    , {"name": "g"}
+    ]
+}
+
+
+---
+./resources/a/description.md
+---
+test
+
+
+---
+./resources/b/about.json
+---
+{ "sections":
+    [ {"name": "a"}
+    , {"name": "b"}
+    , {"name": "c"}
+    , {"name": "d"}
+    , {"name": "e"}
+    , {"name": "f"}
+    , {"name": "g"}
+    ]
+}
+
+
+---
+./resources/b/description.md
+---
+test
+
+
+---
+./sub0003/dep
+---
+sub0003/outline.json
+
+
+---
+./sub0003/outline.json
+---
+{ "sections":
+    [ {"name": "a"}
+    , {"name": "b"}
+    , {"name": "c"}
+    , {"name": "d"}
+    , {"name": "e"}
+    , {"name": "f"}
+    , {"name": "g"}
+    ]
+}
+
+
+---

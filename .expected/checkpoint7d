@@ -13,6 +13,12 @@
 
 
 ---
+./final.txt
+---
+hello
+
+
+---
 ./outline.json
 ---
 { "sections":
@@ -25,6 +31,21 @@
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0001/dep
+---
+sub0001/outline.json
+
+
+---
+./sub0001/dep2
+---
+outline.json
+resources/a/about.json
+resources/b/about.json
+sub0001/dep
 
 
 ---
@@ -43,6 +64,12 @@
 
 
 ---
+./sub0001/sub0001/dep
+---
+sub0001/sub0001/outline.json
+
+
+---
 ./sub0001/sub0001/outline.json
 ---
 { "sections":
@@ -55,6 +82,33 @@
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0001/sub0004/dep
+---
+sub0001/sub0004/outline.json
+
+
+---
+./sub0001/sub0004/outline.json
+---
+{ "sections":
+    [ {"name": "a"}
+    , {"name": "b"}
+    , {"name": "c"}
+    , {"name": "d"}
+    , {"name": "e"}
+    , {"name": "f"}
+    , {"name": "g"}
+    ]
+}
+
+
+---
+./sub0001/sub0000/dep
+---
+sub0001/sub0000/outline.json
 
 
 ---
@@ -73,6 +127,21 @@
 
 
 ---
+./sub0006/dep
+---
+sub0006/outline.json
+
+
+---
+./sub0006/dep2
+---
+outline.json
+resources/a/about.json
+resources/b/about.json
+sub0006/dep
+
+
+---
 ./sub0006/outline.json
 ---
 { "sections":
@@ -85,6 +154,12 @@
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0006/sub0001/dep
+---
+sub0006/sub0001/outline.json
 
 
 ---
@@ -103,6 +178,12 @@
 
 
 ---
+./sub0006/sub0006/dep
+---
+sub0006/sub0006/outline.json
+
+
+---
 ./sub0006/sub0006/outline.json
 ---
 { "sections":
@@ -115,6 +196,12 @@
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0006/sub0002/dep
+---
+sub0006/sub0002/outline.json
 
 
 ---
@@ -133,6 +220,12 @@
 
 
 ---
+./sub0006/sub0004/dep
+---
+sub0006/sub0004/outline.json
+
+
+---
 ./sub0006/sub0004/outline.json
 ---
 { "sections":
@@ -145,6 +238,12 @@
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0006/sub0000/dep
+---
+sub0006/sub0000/outline.json
 
 
 ---
@@ -163,6 +262,12 @@
 
 
 ---
+./sub0006/sub0005/dep
+---
+sub0006/sub0005/outline.json
+
+
+---
 ./sub0006/sub0005/outline.json
 ---
 { "sections":
@@ -175,6 +280,12 @@
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0006/sub0003/dep
+---
+sub0006/sub0003/outline.json
 
 
 ---
@@ -193,6 +304,21 @@
 
 
 ---
+./sub0002/dep
+---
+sub0002/outline.json
+
+
+---
+./sub0002/dep2
+---
+outline.json
+resources/a/about.json
+resources/b/about.json
+sub0002/dep
+
+
+---
 ./sub0002/outline.json
 ---
 { "sections":
@@ -205,6 +331,12 @@
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0002/sub0001/dep
+---
+sub0002/sub0001/outline.json
 
 
 ---
@@ -223,6 +355,12 @@
 
 
 ---
+./sub0002/sub0002/dep
+---
+sub0002/sub0002/outline.json
+
+
+---
 ./sub0002/sub0002/outline.json
 ---
 { "sections":
@@ -235,6 +373,33 @@
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0002/sub0004/dep
+---
+sub0002/sub0004/outline.json
+
+
+---
+./sub0002/sub0004/outline.json
+---
+{ "sections":
+    [ {"name": "a"}
+    , {"name": "b"}
+    , {"name": "c"}
+    , {"name": "d"}
+    , {"name": "e"}
+    , {"name": "f"}
+    , {"name": "g"}
+    ]
+}
+
+
+---
+./sub0002/sub0000/dep
+---
+sub0002/sub0000/outline.json
 
 
 ---
@@ -253,6 +418,21 @@
 
 
 ---
+./sub0004/dep
+---
+sub0004/outline.json
+
+
+---
+./sub0004/dep2
+---
+outline.json
+resources/a/about.json
+resources/b/about.json
+sub0004/dep
+
+
+---
 ./sub0004/outline.json
 ---
 { "sections":
@@ -265,6 +445,12 @@
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0004/sub0001/dep
+---
+sub0004/sub0001/outline.json
 
 
 ---
@@ -283,6 +469,12 @@
 
 
 ---
+./sub0004/sub0002/dep
+---
+sub0004/sub0002/outline.json
+
+
+---
 ./sub0004/sub0002/outline.json
 ---
 { "sections":
@@ -295,6 +487,12 @@
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0004/sub0004/dep
+---
+sub0004/sub0004/outline.json
 
 
 ---
@@ -313,6 +511,12 @@
 
 
 ---
+./sub0004/sub0000/dep
+---
+sub0004/sub0000/outline.json
+
+
+---
 ./sub0004/sub0000/outline.json
 ---
 { "sections":
@@ -325,6 +529,12 @@
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0004/sub0003/dep
+---
+sub0004/sub0003/outline.json
 
 
 ---
@@ -397,6 +607,21 @@ test
 
 
 ---
+./sub0000/dep
+---
+sub0000/outline.json
+
+
+---
+./sub0000/dep2
+---
+outline.json
+resources/a/about.json
+resources/b/about.json
+sub0000/dep
+
+
+---
 ./sub0000/outline.json
 ---
 { "sections":
@@ -409,6 +634,33 @@ test
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0000/sub0004/dep
+---
+sub0000/sub0004/outline.json
+
+
+---
+./sub0000/sub0004/outline.json
+---
+{ "sections":
+    [ {"name": "a"}
+    , {"name": "b"}
+    , {"name": "c"}
+    , {"name": "d"}
+    , {"name": "e"}
+    , {"name": "f"}
+    , {"name": "g"}
+    ]
+}
+
+
+---
+./sub0000/sub0000/dep
+---
+sub0000/sub0000/outline.json
 
 
 ---
@@ -427,6 +679,21 @@ test
 
 
 ---
+./sub0005/dep
+---
+sub0005/outline.json
+
+
+---
+./sub0005/dep2
+---
+outline.json
+resources/a/about.json
+resources/b/about.json
+sub0005/dep
+
+
+---
 ./sub0005/outline.json
 ---
 { "sections":
@@ -439,6 +706,12 @@ test
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0005/sub0001/dep
+---
+sub0005/sub0001/outline.json
 
 
 ---
@@ -457,6 +730,12 @@ test
 
 
 ---
+./sub0005/sub0002/dep
+---
+sub0005/sub0002/outline.json
+
+
+---
 ./sub0005/sub0002/outline.json
 ---
 { "sections":
@@ -469,6 +748,12 @@ test
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0005/sub0004/dep
+---
+sub0005/sub0004/outline.json
 
 
 ---
@@ -487,6 +772,12 @@ test
 
 
 ---
+./sub0005/sub0000/dep
+---
+sub0005/sub0000/outline.json
+
+
+---
 ./sub0005/sub0000/outline.json
 ---
 { "sections":
@@ -499,6 +790,12 @@ test
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0005/sub0005/dep
+---
+sub0005/sub0005/outline.json
 
 
 ---
@@ -517,6 +814,12 @@ test
 
 
 ---
+./sub0005/sub0003/dep
+---
+sub0005/sub0003/outline.json
+
+
+---
 ./sub0005/sub0003/outline.json
 ---
 { "sections":
@@ -529,6 +832,21 @@ test
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0003/dep
+---
+sub0003/outline.json
+
+
+---
+./sub0003/dep2
+---
+outline.json
+resources/a/about.json
+resources/b/about.json
+sub0003/dep
 
 
 ---
@@ -547,6 +865,12 @@ test
 
 
 ---
+./sub0003/sub0001/dep
+---
+sub0003/sub0001/outline.json
+
+
+---
 ./sub0003/sub0001/outline.json
 ---
 { "sections":
@@ -559,6 +883,12 @@ test
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0003/sub0002/dep
+---
+sub0003/sub0002/outline.json
 
 
 ---
@@ -577,6 +907,33 @@ test
 
 
 ---
+./sub0003/sub0004/dep
+---
+sub0003/sub0004/outline.json
+
+
+---
+./sub0003/sub0004/outline.json
+---
+{ "sections":
+    [ {"name": "a"}
+    , {"name": "b"}
+    , {"name": "c"}
+    , {"name": "d"}
+    , {"name": "e"}
+    , {"name": "f"}
+    , {"name": "g"}
+    ]
+}
+
+
+---
+./sub0003/sub0000/dep
+---
+sub0003/sub0000/outline.json
+
+
+---
 ./sub0003/sub0000/outline.json
 ---
 { "sections":
@@ -589,6 +946,12 @@ test
     , {"name": "g"}
     ]
 }
+
+
+---
+./sub0003/sub0003/dep
+---
+sub0003/sub0003/outline.json
 
 
 ---

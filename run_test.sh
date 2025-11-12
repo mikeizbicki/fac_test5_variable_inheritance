@@ -16,7 +16,7 @@ dotest() {
     # The `.results` folder should never be added to the git repo.
     # We use hidden folder names (prefixed with the dot) so that they do not get tracked with the ls -R command.
     mkdir -p .results
-    ls -R > .results/"$1" # ls -R lists all files, including those in subfolders
+    files-to-prompt --ignore fac.yaml --ignore *.sh . > .results/"$1" # files-to-prompt lists all files (recursively) and cats their contents
     diff .results/"$1" .expected/"$1"
 }
 
@@ -48,38 +48,80 @@ dotest checkpoint3
 fac 'final.txt'
 dotest checkpoint4
 
-# If we rerun all of the build commands without cleaning the repo,
-# we should get the same files as the last checkpoint.
-fac 'outline.json' 
-dotest checkpoint4
+fac 'sub0003/dep'
+dotest checkpoint5a
 
-fac 'sub$LEVEL1/outline.json'
-dotest checkpoint4
+fac 'sub$LEVEL1/dep'
+dotest checkpoint5b
 
-fac 'sub$LEVEL1/sub$LEVEL2/outline.json'
-dotest checkpoint4
+fac 'sub$LEVEL1/dep2'
+dotest checkpoint6
 
-fac 'final.txt'
-dotest checkpoint4
+fac 'sub0003/sub0003/dep'
+dotest checkpoint7a
+
+fac 'sub$LEVEL1/sub0004/dep'
+dotest checkpoint7b
+
+fac 'sub0002/sub$LEVEL2/dep'
+dotest checkpoint7c
+
+fac 'sub$LEVEL1/sub$LEVEL2/dep'
+dotest checkpoint7d
+
+fac 'sub$LEVEL1/sub$LEVEL2/dep2'
+dotest checkpoint8
 
 # The next set of tests ensures that we get the same results when building from scratch.
 # The `git clean -fd` command erases all of the build artifacts from the previous steps,
 # which results in a build from scratch.
 clean_repo
 fac 'outline.json' 
-dotest checkpoint1
+dotest checkpoint1_scratch
 
 clean_repo
 fac 'sub$LEVEL1/outline.json'
-dotest checkpoint2
+dotest checkpoint2_scratch
 
 clean_repo
 fac 'sub$LEVEL1/sub$LEVEL2/outline.json'
-dotest checkpoint3
+dotest checkpoint3_scratch
 
 clean_repo
 fac 'final.txt'
-dotest checkpoint4
+dotest checkpoint4_scratch
+
+clean_repo
+fac 'sub0003/dep'
+dotest checkpoint5a_scratch
+
+clean_repo
+fac 'sub$LEVEL1/dep'
+dotest checkpoint5b_scratch
+
+clean_repo
+fac 'sub$LEVEL1/dep2'
+dotest checkpoint6_scratch
+
+clean_repo
+fac 'sub0003/sub0003/dep'
+dotest checkpoint7a_scratch
+
+clean_repo
+fac 'sub$LEVEL1/sub0004/dep'
+dotest checkpoint7b_scratch
+
+clean_repo
+fac 'sub0002/sub$LEVEL2/dep'
+dotest checkpoint7c_scratch
+
+clean_repo
+fac 'sub$LEVEL1/sub$LEVEL2/dep'
+dotest checkpoint7d_scratch
+
+clean_repo
+fac 'sub$LEVEL1/sub$LEVEL2/dep2'
+dotest checkpoint8_scratch
 
 # Finally, we remove all of the build artifacts that we've created.
 # But we leave the "results/" folder so that it can be used to create the "expected" folder if desired.
