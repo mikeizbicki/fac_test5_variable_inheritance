@@ -13,6 +13,18 @@
 
 
 ---
+./deps/a
+---
+test
+
+
+---
+./deps/b
+---
+test
+
+
+---
 ./outline.json
 ---
 { "sections":
@@ -25,102 +37,6 @@
     , {"name": "g"}
     ]
 }
-
-
----
-./sub0001/dep
----
-sub0001/outline.json
-
-
----
-./sub0001/outline.json
----
-{ "sections":
-    [ {"name": "a"}
-    , {"name": "b"}
-    , {"name": "c"}
-    , {"name": "d"}
-    , {"name": "e"}
-    , {"name": "f"}
-    , {"name": "g"}
-    ]
-}
-
-
----
-./sub0006/dep
----
-sub0006/outline.json
-
-
----
-./sub0006/outline.json
----
-{ "sections":
-    [ {"name": "a"}
-    , {"name": "b"}
-    , {"name": "c"}
-    , {"name": "d"}
-    , {"name": "e"}
-    , {"name": "f"}
-    , {"name": "g"}
-    ]
-}
-
-
----
-./sub0002/dep
----
-sub0002/outline.json
-
-
----
-./sub0002/outline.json
----
-{ "sections":
-    [ {"name": "a"}
-    , {"name": "b"}
-    , {"name": "c"}
-    , {"name": "d"}
-    , {"name": "e"}
-    , {"name": "f"}
-    , {"name": "g"}
-    ]
-}
-
-
----
-./sub0004/dep
----
-sub0004/outline.json
-
-
----
-./sub0004/outline.json
----
-{ "sections":
-    [ {"name": "a"}
-    , {"name": "b"}
-    , {"name": "c"}
-    , {"name": "d"}
-    , {"name": "e"}
-    , {"name": "f"}
-    , {"name": "g"}
-    ]
-}
-
-
----
-./deps/a
----
-test
-
-
----
-./deps/b
----
-test
 
 
 ---
@@ -187,13 +103,34 @@ sub0000/outline.json
 
 
 ---
-./sub0005/dep
+./sub0001/dep
 ---
-sub0005/outline.json
+sub0001/outline.json
 
 
 ---
-./sub0005/outline.json
+./sub0001/outline.json
+---
+{ "sections":
+    [ {"name": "a"}
+    , {"name": "b"}
+    , {"name": "c"}
+    , {"name": "d"}
+    , {"name": "e"}
+    , {"name": "f"}
+    , {"name": "g"}
+    ]
+}
+
+
+---
+./sub0002/dep
+---
+sub0002/outline.json
+
+
+---
+./sub0002/outline.json
 ---
 { "sections":
     [ {"name": "a"}
@@ -215,6 +152,69 @@ sub0003/outline.json
 
 ---
 ./sub0003/outline.json
+---
+{ "sections":
+    [ {"name": "a"}
+    , {"name": "b"}
+    , {"name": "c"}
+    , {"name": "d"}
+    , {"name": "e"}
+    , {"name": "f"}
+    , {"name": "g"}
+    ]
+}
+
+
+---
+./sub0004/dep
+---
+sub0004/outline.json
+
+
+---
+./sub0004/outline.json
+---
+{ "sections":
+    [ {"name": "a"}
+    , {"name": "b"}
+    , {"name": "c"}
+    , {"name": "d"}
+    , {"name": "e"}
+    , {"name": "f"}
+    , {"name": "g"}
+    ]
+}
+
+
+---
+./sub0005/dep
+---
+sub0005/outline.json
+
+
+---
+./sub0005/outline.json
+---
+{ "sections":
+    [ {"name": "a"}
+    , {"name": "b"}
+    , {"name": "c"}
+    , {"name": "d"}
+    , {"name": "e"}
+    , {"name": "f"}
+    , {"name": "g"}
+    ]
+}
+
+
+---
+./sub0006/dep
+---
+sub0006/outline.json
+
+
+---
+./sub0006/outline.json
 ---
 { "sections":
     [ {"name": "a"}

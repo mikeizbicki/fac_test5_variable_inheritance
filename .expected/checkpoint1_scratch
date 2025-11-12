@@ -13,6 +13,18 @@
 
 
 ---
+./deps/a
+---
+test
+
+
+---
+./deps/b
+---
+test
+
+
+---
 ./outline.json
 ---
 { "sections":
@@ -25,18 +37,6 @@
     , {"name": "g"}
     ]
 }
-
-
----
-./deps/a
----
-test
-
-
----
-./deps/b
----
-test
 
 
 ---

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -ex
+#set -ex
 alias fac='python3 -m fac --auto_commit=False'
 
 # The idea of this test script is that we will run a series of build commands
@@ -16,7 +16,11 @@ dotest() {
     # The `.results` folder should never be added to the git repo.
     # We use hidden folder names (prefixed with the dot) so that they do not get tracked with the ls -R command.
     mkdir -p .results
-    files-to-prompt --ignore fac.yaml --ignore *.sh . > .results/"$1" # files-to-prompt lists all files (recursively) and cats their contents
+    #files-to-prompt --ignore fac.yaml --ignore *.sh . > .results/"$1" 
+    # files-to-prompt outputs the contents of all files (recursively) to stdout;
+    # we cannot use the command above, however, because files-to-prompt is non-deterministic in its output order;
+    # we need to combine find + sort to get a deterministic ordering of the files
+    files-to-prompt $(find . -type f -not -path "*/.*" -type f -not -name "*.sh" -not -name "*.yaml" | sort) > .results/"$1"
     diff .results/"$1" .expected/"$1"
 }
 
